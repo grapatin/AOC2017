@@ -4,27 +4,57 @@ import cmath
 #import Path for file operations
 from pathlib import Path
 
-problemInputTxt = Path("/Users/pergrapatin/Source/AOC2017/src/dayXX/input.txt").read_text()
+problemInputTxt = Path("/Users/pergrapatin/Source/AOC2017/src/day06-Memory-Reallocation/input.txt").read_text()
 
-exampleInput1 = """aaaaa-bbb-z-y-x-123[abxyz]
-a-b-c-d-e-f-g-h-987[abcde]
-not-a-real-room-404[oarel]
-totally-real-room-200[decoy]"""
-exampleResult1 = 1514
+exampleInput1 = """0 2 7 0"""
+exampleResult1 = 5
 
 def stringWorker(input):
     aSteps = input.split("\n")
     return aSteps
 
-def problemA(input, expectedResult):
-    solution = -1
+def problem(input, expectedResult, problemB = False):
+    solution = 0
+    numbers = [int(word) for word in input.split()]
+    count = 0
+    length = len(numbers)
+    storageDict = {}
 
+    while (solution == 0):
+        max = 0
+        maxIndex = 0
+        #find max
+        stringOfNumbers = ''
+        for i in range(length):
+            number = numbers[i]
+            stringOfNumbers += str(number)
+            if  number > max:
+                max = number
+                maxIndex = i
+        if stringOfNumbers in storageDict:
+            #repeat found
+            if problemB == False:
+                solution = count
+            else:
+                solution = count - storageDict[stringOfNumbers]
+        else:
+            storageDict[stringOfNumbers] = count
+        numberToDevide = max
+        numbers[maxIndex] = 0
+        for k in range(1,numberToDevide+1):
+            i = (maxIndex + k) % length 
+            numbers[i] = numbers[i] + 1
+        count += 1
+        
     if solution == expectedResult:
         print("Correct solution found:", solution)
     else:
         print("Incorrect solution, we got:", solution, "expected:", expectedResult)
 
-problemA(exampleInput1, exampleResult1)
-problemA(problemInputTxt, 0)
+problem(exampleInput1, exampleResult1)
+problem(problemInputTxt, 7864)
+print("\n")
+problem(exampleInput1, 4, True)
+problem(problemInputTxt, 0, True)
 print("\n")
 
