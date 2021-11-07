@@ -71,4 +71,4 @@ problem(problemInputTxt, 20530)
 print("\n")
 
 problem('<{o"i!a,<{i<a>', 10, True)
-problem(problemInputTxt, 0, True)
+problem(problemInputTxt, 9978, True)
