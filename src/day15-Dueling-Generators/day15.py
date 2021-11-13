@@ -55,9 +55,9 @@ def problem_a(input_string, expected_result):
     else:
         print("Incorrect solution, we got:", solution, "expected:", expected_result)
 
-#problem_a(EXAMPLE_INPUT1, EXAMPLE_RESULT1)
-#problem_a(PROGBLEM_INPUT_TXT, 573)
-#print("\n")
+problem_a(EXAMPLE_INPUT1, EXAMPLE_RESULT1)
+problem_a(PROGBLEM_INPUT_TXT, 573)
+print("\n")
 
 def problem_b(input_string, expected_result):
     """Problem B solver function
@@ -76,7 +76,7 @@ def problem_b(input_string, expected_result):
         next_value_2 = calculator_for_b(generator_b, next_value_2, 8)
         if next_value_1 & 0xffff == next_value_2 & 0xffff:
             solution += 1
-            print('Found:', solution, next_value_1, '  ', next_value_2)
+            #print('Found:', solution, next_value_1, '  ', next_value_2)
 
 
     if solution == expected_result:
