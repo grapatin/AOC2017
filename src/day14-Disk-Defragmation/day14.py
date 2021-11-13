@@ -117,6 +117,3 @@ def problemB(input, expectedResult):
 
 problemB('flqrgnkx', 1242)
 problemB('jzgqcdpd', 1212)
-
-
-1242
