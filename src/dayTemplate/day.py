@@ -9,10 +9,7 @@ from pathlib import Path
 PROGBLEM_INPUT_TXT = Path("/Users/pergrapatin/Source/AOC2017/src/"\
     +"dayXX/input.txt").read_text()
 
-EXAMPLE_INPUT1 = """aaaaa-bbb-z-y-x-123[abxyz]
-a-b-c-d-e-f-g-h-987[abcde]
-not-a-real-room-404[oarel]
-totally-real-room-200[decoy]"""
+EXAMPLE_INPUT1 = """"""
 EXAMPLE_RESULT1 = 1514
 
 def string_worker(input_string):
