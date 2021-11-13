@@ -85,5 +85,5 @@ def problem_b(input_string, expected_result):
         print("Incorrect solution, we got:", solution, "expected:", expected_result)
 
 problem_b(EXAMPLE_INPUT1, 309)
-problem_b(PROGBLEM_INPUT_TXT, 0)
+problem_b(PROGBLEM_INPUT_TXT, 294)
 print("\n")
