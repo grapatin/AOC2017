@@ -82,10 +82,8 @@ class MazeWalker:
 def problem_a(input_string, expected_result, problem_b = False):
     """Problem A solved function
     """
-
     current_maze = MazeWalker(input_string)
     steps = 1
-
     while current_maze.move_in_maze():
         steps += 1
 
