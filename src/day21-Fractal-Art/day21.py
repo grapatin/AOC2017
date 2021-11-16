@@ -92,5 +92,6 @@ def create_array_from_string(left_part):
     return np.array([list(inner_part) for inner_part in left_part.split('/')])
 
 problem_a(EXAMPLE_INPUT1, EXAMPLE_RESULT1, 2)
-problem_a(PROGBLEM_INPUT_TXT, 0, 5)  #136, 144 is too low 258 too high
+problem_a(PROGBLEM_INPUT_TXT, 147, 5)
 print("\n")
+problem_a(PROGBLEM_INPUT_TXT, 0, 18)  
