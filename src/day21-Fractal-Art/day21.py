@@ -94,4 +94,4 @@ def create_array_from_string(left_part):
 problem_a(EXAMPLE_INPUT1, EXAMPLE_RESULT1, 2)
 problem_a(PROGBLEM_INPUT_TXT, 147, 5)
 print("\n")
-problem_a(PROGBLEM_INPUT_TXT, 0, 18)  
+problem_a(PROGBLEM_INPUT_TXT, 1936582, 18)
