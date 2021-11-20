@@ -1,0 +1,32 @@
+set b 84
+set c b
+jnz a 2            jnz a PC:5
+jnz 1 5            jnz 1 PC:9
+mul b 100
+sub b -100000      b = 108400
+set c b            c = 108400
+sub c -17000       c = 125400   Hur många av talen mellan dessa är inte prime!
+set f 1
+set d 2
+set e 2
+set g d
+mul g e     d = d*e
+sub g b     
+jnz g 2    jnz g PC:17 f = 0 om b = d*e    
+set f 0
+sub e -1
+set g e       
+sub g b        
+jnz g -8   jnz g PC:12 if b == e => d++
+sub d -1
+set g d
+sub g b
+jnz g -13  jnz g PC:11     if b == d and f == 0 => h++
+jnz f 2    jnz f PC:13     if f == 0 -> h++
+sub h -1                 <- how frequent is this run? ->
+set g b
+sub g c        Om b = c då tar det slut
+jnz g 2    jnz g PC:31
+jnz 1 3    jnz g EXIT
+sub b -17  b = b + 17
+jnz 1 -23  jnz 1 PC:9
